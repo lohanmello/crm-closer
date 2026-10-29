@@ -1,8 +1,16 @@
 # CRM Closer
 
+[![Release](https://img.shields.io/github/v/release/lohanmello/crm-closer?label=release&color=blue)](https://github.com/lohanmello/crm-closer/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows&logoColor=white)
+
 CRM local para closer digital: funil de leads, vendas, comissão e controle de ganhos (**fixo + %**).
 
 Roda **no próprio PC**, sem nuvem e sem depender de uma conta externa. Os dados ficam em um banco SQLite local. A instalação para Windows inclui o Node.js necessário, então não é preciso instalar Node para usar.
+
+[**Baixar para Windows**](https://github.com/lohanmello/crm-closer/releases/latest) · [Manual completo](LEIA-ME.md) · [Licença MIT](LICENSE)
+
+![Dashboard do CRM Closer](docs/dashboard.png)
 
 > **Uso local:** este projeto não é um SaaS. O GitHub hospeda o código e o instalador; cada pessoa roda o CRM no próprio computador.
 
@@ -119,6 +127,8 @@ O script usa o `csc.exe` do .NET Framework 4.x e gera `build\CRMCloser.exe` com 
 .
 ├── server.js              # servidor HTTP + SQLite (Node.js)
 ├── public/                # interface (HTML, CSS e JS)
+├── docs/
+│   └── dashboard.png      # screenshot usada no README
 ├── build/
 │   ├── compilar.bat       # compila o launcher Windows
 │   └── launcher.cs        # fonte do iniciador Windows (CRMCloser.exe)
