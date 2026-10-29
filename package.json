@@ -1,0 +1,14 @@
+{
+  "name": "crm-closer",
+  "version": "1.0.0",
+  "description": "CRM local para closer digital: funil de leads, vendas, comissao e controle de ganhos.",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=26.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}

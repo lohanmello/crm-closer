@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d12">
+  <title>CRM Closer</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div id="login" class="login-screen" hidden>
+    <form id="login-form" class="login-card" autocomplete="off">
+      <div class="brand-mark big">C</div>
+      <h1>CRM Closer</h1>
+      <p>Digite o PIN de 4 dígitos para entrar.</p>
+      <input id="pin" class="pin-input" name="pin" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="••••" aria-label="PIN de acesso">
+      <button class="btn primary wide" type="submit">Entrar</button>
+      <p class="login-erro" id="login-erro"></p>
+    </form>
+  </div>
+
+  <div id="app" hidden>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div class="brand-text">
+          <strong id="brand-nome">CRM Closer</strong>
+          <span>controle de vendas</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav-lateral" aria-label="Menu principal"></nav>
+
+      <div class="sidebar-foot">
+        <div class="sidebar-hint" id="sidebar-hint">Dados salvos no seu PC</div>
+        <div class="sidebar-actions">
+          <button class="icon-btn" data-act="tema" title="Alternar tema" aria-label="Alternar tema">
+            <span id="ico-tema"></span>
+          </button>
+          <button class="icon-btn" data-act="sair" id="btn-sair" title="Sair" aria-label="Sair" hidden>
+            <span id="ico-sair"></span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1 id="page-title">Dashboard</h1>
+          <p id="page-sub">Visão geral do mês</p>
+        </div>
+        <div class="topbar-actions">
+          <label class="month-picker" title="Mês de referência">
+            <span class="month-label">Mês</span>
+            <input type="month" id="mes-input" aria-label="Mês de referência">
+          </label>
+          <button class="btn ghost" data-act="novo-lead" title="Novo lead">
+            <span class="ico" id="ico-mais-lead"></span><span class="btn-txt">Lead</span>
+          </button>
+          <button class="btn primary" data-act="nova-venda" title="Nova venda">
+            <span class="ico" id="ico-mais-venda"></span><span class="btn-txt">Venda</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+
+    <nav class="bottomnav" id="nav-inferior" aria-label="Menu principal"></nav>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
